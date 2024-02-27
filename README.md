@@ -10,7 +10,7 @@ Depth-vOICe is a revitalized version of vOICe, a groundbreaking synesthesia devi
 
 In the following example, we see noise-free signals highlighting major objects of interests i.e. the bus and car. The advancing car is identifiable as the portion of the signal that increases in amplitude and shifts relative to the vehicle.
 
-![](https://github.com/statix531441/Video-to-Soundscape-Convertor-Using-Depth-Maps/blob/main/outputs/car2cam/video.gif)
+![](https://github.com/statix531441/Depth-vOICe/blob/main/outputs/car2cam/video.gif)
 
 ### To Run the Program
 
