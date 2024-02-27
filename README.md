@@ -20,3 +20,4 @@ cd Depth-vOICe
 pip install -r requirements.txt
 python convert.py --video <path-to-video>
 ```
+The output audio can be found as outputs/<video-name>/audio.wav
