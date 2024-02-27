@@ -11,12 +11,20 @@ import torch
 
 from util import get_dmap, get_object_bboxes
 
+import argparse
+
+parser = argparse.ArgumentParser(description="Train a machine learning model")
+
+parser.add_argument("--video", default='videos/car2cam.mp4', type=str)
+
+
+args = parser.parse_args()
 
 CONF_THRES = 0.6
 CROP = [None, None, None, 1250]
 SHAPE = (300,150)
 
-file = 'videos/car2cam.mp4'
+file = args.video
 out_file = file.split('/')[-1].split('.')[0]
 os.makedirs(f'outputs/{out_file}', exist_ok=True)
 
@@ -74,7 +82,7 @@ while vid.isOpened():
                 duration += 1
 
         out.write((255*obj_filtered).astype('uint8'))
-        cv2.imshow('fancy', obj_filtered)
+        cv2.imshow('Final video', cv2.resize(obj_filtered, img.shape[1::-1]))
         frame_num += 1
 
         if cv2.waitKey(25) & 0xFF == ord('q'): 
